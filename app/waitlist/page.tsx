@@ -229,7 +229,7 @@ export default function WaitlistPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-16 items-stretch">
             {audienceCards.map((card) => {
               const Icon = card.icon;
               const isSelected = selectedAudience === card.type;
@@ -238,7 +238,7 @@ export default function WaitlistPage() {
                 <button
                   key={card.type}
                   onClick={() => setSelectedAudience(card.type)}
-                  className={`group relative p-8 rounded-2xl border-2 transition-all duration-300 text-left ${
+                  className={`group relative p-8 rounded-2xl border-2 transition-all duration-300 text-left h-full flex flex-col ${
                     isSelected
                       ? 'border-primary bg-primary/5 shadow-xl shadow-primary/20 scale-105'
                       : 'border-border bg-card hover:border-primary/50 hover:shadow-lg'
@@ -247,7 +247,7 @@ export default function WaitlistPage() {
                   {/* Gradient overlay on hover */}
                   <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${card.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
 
-                  <div className="relative">
+                  <div className="relative flex flex-col h-full">
                     <div className={`inline-flex p-4 rounded-xl mb-4 transition-all ${
                       isSelected ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'
                     }`}>
@@ -258,17 +258,17 @@ export default function WaitlistPage() {
                       {card.title}
                     </h3>
 
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-muted-foreground mb-4 flex-grow">
                       {card.description}
                     </p>
 
-                    <div className={`flex items-center gap-2 font-medium text-sm transition-colors ${
+                    <div className={`flex items-center gap-2 font-medium text-sm transition-colors mt-auto ${
                       isSelected
                         ? 'text-primary'
                         : 'text-primary/70 group-hover:text-primary'
                     }`}>
                       <span>View Details</span>
-                      <ArrowDown className={`w-4 h-4 ${isSelected ? 'animate-bounce' : ''}`} />
+                      <ArrowDown className={`w-4 h-4 transition-transform ${isSelected ? 'animate-bounce' : ''}`} />
                     </div>
                   </div>
                 </button>
