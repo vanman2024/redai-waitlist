@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { WaitlistHeader } from '@/components/waitlist/WaitlistHeader';
 import { WaitlistFooter } from '@/components/waitlist/WaitlistFooter';
 import { HeroChat } from '@/components/landing/hero-chat';
@@ -34,6 +34,20 @@ type UserType = 'student' | 'employer' | 'immigration_consultant' | 'internation
 
 export default function WaitlistPage() {
   const [selectedAudience, setSelectedAudience] = useState<UserType>(null);
+  const benefitsSectionRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to benefits section when audience is selected (mobile fix)
+  useEffect(() => {
+    if (selectedAudience && benefitsSectionRef.current) {
+      // Small delay to let the content render first
+      setTimeout(() => {
+        benefitsSectionRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 100);
+    }
+  }, [selectedAudience]);
 
   const audienceCards = [
     {
@@ -278,7 +292,7 @@ export default function WaitlistPage() {
 
           {/* Dynamic Benefits Section */}
           {selectedCard && (
-            <div className="max-w-5xl mx-auto animate-fade-in">
+            <div ref={benefitsSectionRef} className="max-w-5xl mx-auto animate-fade-in">
               <div className={`relative overflow-hidden rounded-3xl border-2 border-primary/20 bg-gradient-to-br ${selectedCard.color} p-1`}>
                 <div className="bg-background rounded-2xl p-8 lg:p-12">
                   <div className="flex items-center gap-4 mb-8">
