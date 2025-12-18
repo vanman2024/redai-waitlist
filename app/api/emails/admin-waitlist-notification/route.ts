@@ -49,14 +49,14 @@ export async function POST(request: NextRequest) {
       if (industry) {
         const industryDisplay = industry === 'other' && industry_other
           ? `Other (${industry_other})`
-          : industry.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+          : industry.split('_').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
         typeDetails += `<p><strong>Industry:</strong> ${industryDisplay}</p>`;
       }
 
       // Show hiring needs (multiple trades)
       if (hiring_needs) {
-        const trades = hiring_needs.split(',').filter(Boolean).map(t =>
-          t.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+        const trades = hiring_needs.split(',').filter(Boolean).map((t: string) =>
+          t.split('_').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
         );
         typeDetails += `<p><strong>Hiring For:</strong> ${trades.join(', ')}</p>`;
       }
