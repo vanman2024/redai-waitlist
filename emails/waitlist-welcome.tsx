@@ -70,10 +70,11 @@ export const WaitlistWelcomeEmail: React.FC<WaitlistWelcomeEmailProps> = ({
   const content = userTypeContent[userType];
 
   return (
-    <EmailLayout
-      previewText="You're on the Red Seal Hub Waitlist!"
-      headerTitle="Welcome to Red Seal Hub!"
-    >
+    <EmailLayout preview="You're on the Red Seal Hub Waitlist!">
+      <Text style={{ fontSize: '24px', fontWeight: 'bold', marginTop: 0, marginBottom: '16px', color: '#dc2626' }}>
+        Welcome to Red Seal Hub!
+      </Text>
+
       <Text style={{ fontSize: '16px', marginTop: 0 }}>
         {nameGreeting}! 👋
       </Text>
