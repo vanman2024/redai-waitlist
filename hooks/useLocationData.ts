@@ -1,15 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export function useLocationData() {
-  const [countries, setCountries] = useState<string[]>([]);
-  const [provinces, setProvinces] = useState<string[]>([]);
-  const [cities, setCities] = useState<string[]>([]);
+  const [countries] = useState<string[]>([]);
+  const [regions] = useState<string[]>([]);
+  const [loadingCountries] = useState(false);
+  const [loadingRegions] = useState(false);
 
   return {
     countries,
-    provinces,
-    cities,
-    loadProvinces: () => {},
-    loadCities: () => {},
+    regions,
+    loadingCountries,
+    loadingRegions,
+    fetchRegions: () => {},
+    getRegionLabel: (country: string) => 'Province/State',
+    hasRegions: (country: string) => false,
   };
 }
