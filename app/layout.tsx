@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Red Seal Hub - Join the Waitlist | AI-Powered Red Seal Exam Prep",
-  description: "Join the Red Seal Hub waitlist! AI-powered study platform for all 54 Red Seal trades. Personalized exam prep, practice quizzes, and job connections. Beta launching January 2026.",
-  keywords: ["Red Seal", "trades certification", "exam prep", "AI study tool", "apprentice training", "skilled trades"],
+  title: "Red Seal Hub - Join the Waitlist | AI-Powered Skilled Trades Platform",
+  description: "Join the Red Seal Hub waitlist! Complete AI-powered platform for skilled trades - exam prep for students, job matching for employers, immigration pathways for international workers, and mentorship. Beta launching January 2026.",
+  keywords: ["Red Seal", "skilled trades", "trades certification", "exam prep", "apprentice jobs", "immigration consultant", "international workers", "Red Seal immigration", "trade jobs Canada", "skilled worker immigration"],
   authors: [{ name: "Red Seal Hub" }],
   openGraph: {
-    title: "Red Seal Hub - AI-Powered Exam Prep for Skilled Trades",
-    description: "Join the waitlist for Red Seal Hub! Personalized AI study partner for all 54 Red Seal trades. Beta launching January 2026.",
+    title: "Red Seal Hub - AI-Powered Skilled Trades Platform",
+    description: "Complete platform for skilled trades: AI exam prep, employer job matching, immigration pathways, and mentorship. For students, employers, immigration consultants, and international workers.",
     url: "https://waitlist.redsealhub.com",
     siteName: "Red Seal Hub",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Red Seal Hub - Join the Waitlist",
-    description: "AI-powered exam prep for all 54 Red Seal trades. Beta launching January 2026.",
+    description: "Complete AI-powered platform for skilled trades: exam prep, job matching, immigration pathways, and mentorship.",
     images: ["/og-image.png"],
   },
   robots: {
