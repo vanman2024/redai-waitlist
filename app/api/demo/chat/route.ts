@@ -53,7 +53,6 @@ export async function POST(req: Request) {
       messages: convertToCoreMessages(messages),
       system: systemPrompt,
       temperature: 0.5,
-      maxTokens: 1500, // Increased to prevent mid-sentence cutoffs
     });
 
     return result.toDataStreamResponse();
