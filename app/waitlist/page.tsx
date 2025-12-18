@@ -46,7 +46,7 @@ export default function WaitlistPage() {
         { icon: MessageSquare, title: 'AI That Remembers You', desc: 'Red learns with you - remembers every conversation, quiz, and weak area over your entire journey' },
         { icon: TrendingUp, title: 'Smart Progress Tracking', desc: 'Tracks what you struggle with and recommends exactly what to study next based on YOUR performance' },
         { icon: Sparkles, title: 'Personalized Quizzes', desc: 'Auto-generated practice tests that adapt to your weak areas - gets smarter the more you use it' },
-        { icon: Target, title: 'Real Exam Simulation', desc: 'Full 135-question practice exams that mirror actual Red Seal format and timing' },
+        { icon: Target, title: 'Real Exam Simulation', desc: 'Practice exams for 1st, 2nd, 3rd, 4th year levels AND Red Seal - mirrors actual exam format and timing' },
         { icon: Upload, title: 'Upload Any Materials', desc: 'Upload images, notes, PDFs, documents - Red turns them into personalized practice questions' },
         { icon: Mic, title: 'Voice AI', desc: 'Study hands-free while working - Red remembers your voice conversations too' },
         { icon: Smartphone, title: 'Study Anywhere', desc: 'Mobile-friendly platform - study on breaks, commutes, or at the shop whenever you have time' },
