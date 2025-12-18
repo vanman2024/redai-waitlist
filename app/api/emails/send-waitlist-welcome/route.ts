@@ -3,10 +3,9 @@ import { Resend } from 'resend';
 import { WaitlistWelcomeEmail } from '@/emails/waitlist-welcome';
 import React from 'react';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { email, name, userType } = await req.json();
 
     if (!email) {
