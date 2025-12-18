@@ -36,14 +36,14 @@ export async function POST(request: NextRequest) {
     if (industry === 'other' && industry_other) {
       industryDisplay = `Other (${industry_other})`;
     } else if (industry) {
-      industryDisplay = industry.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      industryDisplay = industry.split('_').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     }
 
     // Format hiring needs (multiple trades)
     let hiringNeedsDisplay = '';
     if (hiring_needs) {
-      const trades = hiring_needs.split(',').filter(Boolean).map(t =>
-        t.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+      const trades = hiring_needs.split(',').filter(Boolean).map((t: string) =>
+        t.split('_').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
       );
       hiringNeedsDisplay = trades.join(', ');
     }
