@@ -40,7 +40,7 @@ export default function WaitlistPage() {
       type: 'student' as UserType,
       icon: GraduationCap,
       title: 'Students & Apprentices',
-      description: 'Apprentice (4-5 years) or Challenge exam prep',
+      description: '1-4 year apprentice or Challenge exam prep',
       color: 'from-blue-500 to-cyan-500',
       benefits: [
         { icon: MessageSquare, title: 'AI That Remembers You', desc: 'Red learns with you - remembers every conversation, quiz, and weak area over your entire journey' },
@@ -50,7 +50,7 @@ export default function WaitlistPage() {
         { icon: Upload, title: 'Upload Any Materials', desc: 'Upload images, notes, PDFs, documents - Red turns them into personalized practice questions' },
         { icon: Mic, title: 'Voice AI', desc: 'Study hands-free while working - Red remembers your voice conversations too' },
         { icon: Smartphone, title: 'Study Anywhere', desc: 'Mobile-friendly platform - study on breaks, commutes, or at the shop whenever you have time' },
-        { icon: Briefcase, title: 'Job Connections', desc: 'Get matched with employers looking for your trade once you pass your Red Seal exam' }
+        { icon: Briefcase, title: 'Job Connections', desc: 'Get matched with employers looking for apprentices and certified workers in your trade' }
       ],
       pricing: { amount: 'Free - $49.99', period: '/month', note: 'Starts free, upgrade as you progress' }
     },
