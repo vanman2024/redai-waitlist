@@ -262,17 +262,14 @@ export default function WaitlistPage() {
                       {card.description}
                     </p>
 
-                    {isSelected ? (
-                      <div className="flex items-center gap-2 text-primary font-medium text-sm">
-                        <span>View Details</span>
-                        <ArrowDown className="w-4 h-4 animate-bounce" />
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-2 text-primary/70 group-hover:text-primary font-medium text-sm transition-colors">
-                        <span>View Details</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    )}
+                    <div className={`flex items-center gap-2 font-medium text-sm transition-colors ${
+                      isSelected
+                        ? 'text-primary'
+                        : 'text-primary/70 group-hover:text-primary'
+                    }`}>
+                      <span>View Details</span>
+                      <ArrowDown className={`w-4 h-4 ${isSelected ? 'animate-bounce' : ''}`} />
+                    </div>
                   </div>
                 </button>
               );
