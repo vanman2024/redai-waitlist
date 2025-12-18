@@ -55,7 +55,7 @@ export async function POST(req: Request) {
       temperature: 0.5,
     });
 
-    return result.toTextStreamResponse();
+    return result.toDataStreamResponse();
 
   } catch (error) {
     console.error('[Demo Chat] Error:', error);
