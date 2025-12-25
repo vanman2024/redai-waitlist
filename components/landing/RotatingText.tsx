@@ -31,7 +31,7 @@ export function RotatingText() {
 
   return (
     <span
-      className={`inline-block min-w-[280px] lg:min-w-[320px] text-left transition-opacity duration-500 ${
+      className={`inline-block transition-opacity duration-500 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >

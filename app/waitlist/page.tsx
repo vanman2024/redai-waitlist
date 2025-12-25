@@ -167,11 +167,13 @@ export default function WaitlistPage() {
                 Launching Soon
               </div>
 
-              <h1 className="text-5xl lg:text-7xl font-bold mb-4 text-foreground leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
                 Meet <span className="text-red-600">Red</span>, Your AI{' '}
                 <span className="text-red-600">
                   <RotatingText />
                 </span>
+                <br />
+                for the Skilled Trades
               </h1>
 
               <p className="text-2xl lg:text-3xl font-semibold text-muted-foreground mb-6">
