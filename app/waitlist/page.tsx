@@ -58,9 +58,11 @@ export default function WaitlistPage() {
       color: 'from-red-600 to-red-500',
       benefits: [
         { icon: Target, title: 'Challenge Pathway', desc: 'Experienced tradesperson? Study for your Red Seal challenge exam with simulations for Year 1-4 levels plus the final Red Seal exam' },
+        { icon: Calendar, title: 'Apprenticeship Pathway', desc: 'Study for Year 1, 2, 3, and 4 apprentice exams with unlimited practice quizzes and test prep - master every level' },
         { icon: MessageSquare, title: 'AI That Remembers You', desc: 'Red learns with you - remembers every conversation, quiz, and weak area over your entire journey' },
         { icon: TrendingUp, title: 'Smart Progress Tracking', desc: 'Tracks what you struggle with and recommends exactly what to study next based on YOUR performance' },
-        { icon: Sparkles, title: 'Personalized Quizzes', desc: 'Auto-generated practice tests that adapt to your weak areas - gets smarter the more you use it' },
+        { icon: Sparkles, title: 'Personalized Practice Exams', desc: 'Generate quizzes and practice tests from your own uploaded content or AI-generated questions - adapts to your weak areas and gets smarter the more you use it' },
+        { icon: CheckCircle2, title: 'Full Exam Simulation', desc: '135-question practice exams that mirror the actual Red Seal exam format, timing, and difficulty - know exactly what to expect on test day' },
         { icon: Upload, title: 'Upload Any Materials', desc: 'Upload images, notes, PDFs, documents - Red turns them into personalized practice questions' },
         { icon: Mic, title: 'Voice AI', desc: 'Study hands-free while working - Red remembers your voice conversations too' },
         { icon: Smartphone, title: 'Study Anywhere', desc: 'Mobile-friendly platform - study on breaks, commutes, or at the shop whenever you have time' },
@@ -166,7 +168,7 @@ export default function WaitlistPage() {
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-4 text-foreground leading-tight">
-                Meet <span className="text-red-600">Red</span>, Your{' '}
+                Meet <span className="text-red-600">Red</span>, Your AI{' '}
                 <span className="text-red-600">
                   <RotatingText />
                 </span>
