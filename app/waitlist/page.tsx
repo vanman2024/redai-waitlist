@@ -53,14 +53,14 @@ export default function WaitlistPage() {
     {
       type: 'student' as UserType,
       icon: GraduationCap,
-      title: 'Students & Apprentices',
-      description: '1-4 year apprentice or Challenge exam prep',
-      color: 'from-blue-500 to-cyan-500',
+      title: 'Challenge & Apprentices',
+      description: 'Challenge exam or 1-4 year apprentice prep',
+      color: 'from-red-600 to-red-500',
       benefits: [
+        { icon: Target, title: 'Challenge Pathway', desc: 'Experienced tradesperson? Study for your Red Seal challenge exam with simulations for Year 1-4 levels plus the final Red Seal exam' },
         { icon: MessageSquare, title: 'AI That Remembers You', desc: 'Red learns with you - remembers every conversation, quiz, and weak area over your entire journey' },
         { icon: TrendingUp, title: 'Smart Progress Tracking', desc: 'Tracks what you struggle with and recommends exactly what to study next based on YOUR performance' },
         { icon: Sparkles, title: 'Personalized Quizzes', desc: 'Auto-generated practice tests that adapt to your weak areas - gets smarter the more you use it' },
-        { icon: Target, title: 'Real Exam Simulation', desc: 'Practice exams for 1st, 2nd, 3rd, 4th year levels AND Red Seal - mirrors actual exam format and timing' },
         { icon: Upload, title: 'Upload Any Materials', desc: 'Upload images, notes, PDFs, documents - Red turns them into personalized practice questions' },
         { icon: Mic, title: 'Voice AI', desc: 'Study hands-free while working - Red remembers your voice conversations too' },
         { icon: Smartphone, title: 'Study Anywhere', desc: 'Mobile-friendly platform - study on breaks, commutes, or at the shop whenever you have time' },
@@ -73,7 +73,7 @@ export default function WaitlistPage() {
       icon: Building2,
       title: 'Employers',
       description: 'Find verified skilled workers faster',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-blue-500 to-cyan-600',
       benefits: [
         { icon: UserCheck, title: 'Verified Candidates', desc: 'Browse workers with verified skills and exam scores - no more resume padding' },
         { icon: Award, title: 'Apprentice to Red Seal', desc: 'Access candidates at all levels - from apprentices to certified journeymen' },
@@ -108,19 +108,19 @@ export default function WaitlistPage() {
       type: 'international_worker' as UserType,
       icon: Globe,
       title: 'International Students',
-      description: 'Your pathway to studying and working in Canada',
+      description: 'Master Canadian terminology in your own language',
       color: 'from-green-500 to-emerald-500',
       benefits: [
-        { icon: Award, title: '99 Languages', desc: 'Study in your native language, test in English/French - Red Seal opens doors' },
-        { icon: MapPin, title: 'Canadian Jobs', desc: 'Get matched with employers actively sponsoring foreign workers' },
+        { icon: Award, title: 'Study in Your Language', desc: 'Learn Red Seal material in your native language with side-by-side English/French terminology comparisons' },
+        { icon: Mic, title: 'Audio Pronunciation', desc: 'Hear Canadian trade terms pronounced correctly - bridge the language gap with audio support for technical vocabulary' },
+        { icon: Globe, title: 'Terminology Comparisons', desc: 'Side-by-side comparisons of trade terms from your country vs Canada - understand the differences clearly' },
+        { icon: Target, title: 'Canadian Red Seal Prep', desc: 'Master Canadian trade certification exam in your own language, then test in English/French with confidence' },
+        { icon: MapPin, title: 'Canadian Jobs', desc: 'Get matched with employers actively sponsoring foreign workers once you understand Canadian standards' },
         { icon: CheckCircle2, title: 'Verified Consultants', desc: 'Search verified RCICs specializing in trades - avoid immigration fraud and scams' },
-        { icon: Users, title: 'Community Support', desc: 'Connect with other international workers who made the move successfully' },
-        { icon: Briefcase, title: 'Credential Recognition', desc: 'Understand how your foreign credentials translate to Canadian Red Seal' },
-        { icon: Target, title: 'Red Seal Prep', desc: 'Pass your Canadian trade certification exam - required for most provinces' },
-        { icon: TrendingUp, title: 'Settlement Resources', desc: 'Housing, banking, healthcare guides for new immigrants' },
-        { icon: MessageSquare, title: 'Direct Employer Chat', desc: 'Message employers directly - negotiate job offers before you arrive' }
+        { icon: Briefcase, title: 'Credential Recognition', desc: 'Understand how your foreign credentials translate to Canadian Red Seal standards and requirements' },
+        { icon: MessageSquare, title: 'Direct Employer Chat', desc: 'Message employers directly - negotiate job offers before you arrive in Canada' }
       ],
-      pricing: { amount: '$39', period: '/month', note: 'Fraction of traditional programs' }
+      pricing: { amount: '$39', period: '/month', note: 'Proper study support, not a shortcut' }
     },
     {
       type: 'mentor' as UserType,
@@ -197,7 +197,7 @@ export default function WaitlistPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
-                Try Red Right Now
+                Try <span className="text-red-600">Red</span> Right Now
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Pick your trade and ask a question — see how Red helps you learn
@@ -208,100 +208,210 @@ export default function WaitlistPage() {
               <HeroChat showCTAButtons={false} />
             </div>
 
-            {/* Trust Stats - Moved Here */}
+            {/* Trust Stats - Redesigned */}
             <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-10 rounded-2xl bg-gradient-to-br from-primary/5 to-background border-2 border-primary/10">
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">56</div>
-                  <div className="text-sm font-medium text-muted-foreground">Red Seal Trades Covered</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 hover:bg-zinc-900/80 transition-all text-center">
+                  <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-br from-red-500 to-orange-600 bg-clip-text text-transparent mb-3">56</div>
+                  <div className="text-sm font-medium text-zinc-400 group-hover:text-zinc-300 transition-colors">Red Seal Trades Covered</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">99</div>
-                  <div className="text-sm font-medium text-muted-foreground">Languages Supported</div>
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-orange-500/50 hover:bg-zinc-900/80 transition-all text-center">
+                  <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-br from-orange-500 to-amber-600 bg-clip-text text-transparent mb-3">99</div>
+                  <div className="text-sm font-medium text-zinc-400 group-hover:text-zinc-300 transition-colors">Languages Supported</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">24/7</div>
-                  <div className="text-sm font-medium text-muted-foreground">AI Tutor Available</div>
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-pink-500/50 hover:bg-zinc-900/80 transition-all text-center">
+                  <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-br from-pink-500 to-rose-600 bg-clip-text text-transparent mb-3">24/7</div>
+                  <div className="text-sm font-medium text-zinc-400 group-hover:text-zinc-300 transition-colors">AI Tutor Available</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">85%+</div>
-                  <div className="text-sm font-medium text-muted-foreground">Target Pass Rate</div>
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-amber-500/50 hover:bg-zinc-900/80 transition-all text-center">
+                  <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-br from-amber-500 to-orange-600 bg-clip-text text-transparent mb-3">85%+</div>
+                  <div className="text-sm font-medium text-zinc-400 group-hover:text-zinc-300 transition-colors">Target Pass Rate</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Audience Selector */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
-              Who Is Red For?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Select your role to see how Red can help you
-            </p>
-          </div>
+        {/* Why Get Your Red Seal Section */}
+        <div className="bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
+                  Why Get Your <span className="text-red-600">Red Seal</span>?
+                </h2>
+                <p className="text-lg lg:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                  You might be thinking: "Why do I need this extra step?" Here's why it's worth it:
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-16 items-stretch">
-            {audienceCards.map((card) => {
-              const Icon = card.icon;
-              const isSelected = selectedAudience === card.type;
-
-              return (
-                <button
-                  key={card.type}
-                  onClick={() => setSelectedAudience(card.type)}
-                  className={`group relative p-8 rounded-2xl border-2 transition-all duration-300 text-left h-full flex flex-col ${
-                    isSelected
-                      ? 'border-primary bg-primary/5 shadow-xl shadow-primary/20 scale-105'
-                      : 'border-border bg-card hover:border-primary/50 hover:shadow-lg'
-                  }`}
-                >
-                  {/* Gradient overlay on hover */}
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${card.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
-
-                  <div className="relative flex flex-col h-full">
-                    <div className={`inline-flex p-4 rounded-xl mb-4 transition-all ${
-                      isSelected ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'
-                    }`}>
-                      <Icon className="w-8 h-8" />
-                    </div>
-
-                    <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
-                      {card.title}
-                    </h3>
-
-                    <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                      {card.description}
-                    </p>
-
-                    <div className={`flex items-center gap-2 font-medium text-sm transition-colors mt-auto ${
-                      isSelected
-                        ? 'text-primary'
-                        : 'text-primary/70 group-hover:text-primary'
-                    }`}>
-                      <span>View Details</span>
-                      <ArrowDown className={`w-4 h-4 transition-transform ${isSelected ? 'animate-bounce' : ''}`} />
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Dynamic Benefits Section */}
-          {selectedCard && (
-            <div ref={benefitsSectionRef} className="max-w-5xl mx-auto animate-fade-in">
-              <div className={`relative overflow-hidden rounded-3xl border-2 border-primary/20 bg-gradient-to-br ${selectedCard.color} p-1`}>
-                <div className="bg-background rounded-2xl p-8 lg:p-12">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="p-4 rounded-xl bg-primary/10">
-                      <selectedCard.icon className="w-10 h-10 text-primary" />
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-orange-500/50 hover:bg-zinc-900/80 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex-shrink-0 group-hover:scale-110 transition-all shadow-lg shadow-orange-500/20">
+                      <MapPin className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold text-foreground">{selectedCard.title}</h3>
-                      <p className="text-muted-foreground">{selectedCard.description}</p>
+                      <h3 className="text-xl font-bold mb-2 text-white">Work Anywhere in Canada</h3>
+                      <p className="text-zinc-400">
+                        Interprovincial mobility means you can take jobs across all provinces and territories without re-certifying. No borders, no limitations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-orange-500/50 hover:bg-zinc-900/80 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex-shrink-0 group-hover:scale-110 transition-all shadow-lg shadow-orange-500/20">
+                      <TrendingUp className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white">Earn 15-25% More</h3>
+                      <p className="text-zinc-400">
+                        Red Seal certified workers command higher wages. That extra step pays for itself many times over throughout your career.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-red-500/50 hover:bg-zinc-900/80 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex-shrink-0 group-hover:scale-110 transition-all shadow-lg shadow-red-500/20">
+                      <Globe className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white">International Recognition</h3>
+                      <p className="text-zinc-400">
+                        Your Red Seal is recognized globally. Work opportunities in the US, Australia, and other countries open up with this credential.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-pink-500/50 hover:bg-zinc-900/80 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex-shrink-0 group-hover:scale-110 transition-all shadow-lg shadow-pink-500/20">
+                      <Briefcase className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white">More Career Options</h3>
+                      <p className="text-zinc-400">
+                        Fly-in/fly-out jobs, major contractors, interprovincial projects — Red Seal opens doors you didn't know existed.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-orange-500/50 hover:bg-zinc-900/80 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex-shrink-0 group-hover:scale-110 transition-all shadow-lg shadow-orange-500/20">
+                      <Award className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white">Job Security & Advancement</h3>
+                      <p className="text-zinc-400">
+                        Red Seal certification gives you leverage in negotiations, first pick of the best positions, and a clear path to supervisory roles.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-amber-500/50 hover:bg-zinc-900/80 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex-shrink-0 group-hover:scale-110 transition-all shadow-lg shadow-amber-500/20">
+                      <CheckCircle2 className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-white">Professional Credibility</h3>
+                      <p className="text-zinc-400">
+                        Even if you plan to stay in your province, Red Seal proves your expertise and gives you options when opportunities arise.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800">
+                <p className="text-lg lg:text-xl font-semibold text-white mb-2">
+                  Even if you plan to stay local, Red Seal opens doors you didn't know existed.
+                </p>
+                <p className="text-zinc-400">
+                  It's not just about where you can work — it's about having the freedom to choose your best opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Audience Selector */}
+        <div className="bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
+                Who Is <span className="text-red-600">Red</span> For?
+              </h2>
+              <p className="text-lg lg:text-xl text-zinc-400 max-w-2xl mx-auto">
+                Select your role to see how Red can help you
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-16 items-stretch">
+              {audienceCards.map((card) => {
+                const Icon = card.icon;
+                const isSelected = selectedAudience === card.type;
+
+                return (
+                  <button
+                    key={card.type}
+                    onClick={() => setSelectedAudience(card.type)}
+                    className={`group relative p-8 rounded-2xl transition-all duration-300 text-left h-full flex flex-col ${
+                      isSelected
+                        ? 'bg-gradient-to-br ' + card.color + ' shadow-2xl scale-105'
+                        : 'bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-900/80 hover:border-zinc-700 hover:shadow-xl'
+                    }`}
+                  >
+                    <div className="relative flex flex-col h-full">
+                      <div className={`inline-flex p-4 rounded-xl mb-4 transition-all ${
+                        isSelected
+                          ? 'bg-white/20 backdrop-blur-sm'
+                          : 'bg-gradient-to-br ' + card.color + ' shadow-lg'
+                      }`}>
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+
+                      <h3 className="text-xl font-bold mb-2 text-white transition-colors">
+                        {card.title}
+                      </h3>
+
+                      <p className="text-sm text-zinc-400 mb-4 flex-grow">
+                        {card.description}
+                      </p>
+
+                      <div className={`flex items-center gap-2 font-medium text-sm transition-colors mt-auto ${
+                        isSelected
+                          ? 'text-white'
+                          : 'text-zinc-400 group-hover:text-white'
+                      }`}>
+                        <span>View Details</span>
+                        <ArrowDown className={`w-4 h-4 transition-transform ${isSelected ? 'animate-bounce' : ''}`} />
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Dynamic Benefits Section */}
+            {selectedCard && (
+              <div ref={benefitsSectionRef} className="max-w-5xl mx-auto animate-fade-in">
+                <div className="relative overflow-hidden rounded-3xl bg-zinc-900/50 border border-zinc-800 p-8 lg:p-12">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className={`p-4 rounded-xl bg-gradient-to-br ${selectedCard.color} shadow-lg`}>
+                      <selectedCard.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-white">{selectedCard.title}</h3>
+                      <p className="text-zinc-400">{selectedCard.description}</p>
                     </div>
                   </div>
 
@@ -309,13 +419,13 @@ export default function WaitlistPage() {
                     {selectedCard.benefits.map((benefit, index) => {
                       const BenefitIcon = benefit.icon;
                       return (
-                        <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
-                          <div className="p-2 rounded-lg bg-primary/10 flex-shrink-0">
-                            <BenefitIcon className="w-6 h-6 text-primary" />
+                        <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-zinc-800/30 hover:bg-zinc-800/50 transition-colors border border-zinc-800/50">
+                          <div className={`p-2 rounded-lg bg-gradient-to-br ${selectedCard.color} flex-shrink-0 shadow-md`}>
+                            <BenefitIcon className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <h4 className="font-semibold mb-1 text-foreground">{benefit.title}</h4>
-                            <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+                            <h4 className="font-semibold mb-1 text-white">{benefit.title}</h4>
+                            <p className="text-sm text-zinc-400">{benefit.desc}</p>
                           </div>
                         </div>
                       );
@@ -323,18 +433,18 @@ export default function WaitlistPage() {
                   </div>
 
                   {selectedCard.pricing && (
-                    <div className="p-6 rounded-xl bg-primary/5 border border-primary/20">
+                    <div className="p-6 rounded-xl bg-zinc-800/30 border border-zinc-800/50">
                       <div className="flex items-baseline gap-2 mb-2">
-                        <span className="text-4xl font-bold text-primary">{selectedCard.pricing.amount}</span>
-                        <span className="text-lg text-muted-foreground">{selectedCard.pricing.period}</span>
+                        <span className="text-4xl font-bold text-white">{selectedCard.pricing.amount}</span>
+                        <span className="text-lg text-zinc-400">{selectedCard.pricing.period}</span>
                       </div>
-                      <p className="text-sm text-muted-foreground">{selectedCard.pricing.note}</p>
+                      <p className="text-sm text-zinc-400">{selectedCard.pricing.note}</p>
                     </div>
                   )}
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         {/* Waitlist Form Section */}
